@@ -129,6 +129,7 @@ input[type=text] {  /* can be set in .search-form__textfield with color: #fff  *
     color: #fff;
 }
 
+
 .search-form__textfield::placeholder {
     color: rgba(255, 255, 255, 0.70);
 }
@@ -223,7 +224,7 @@ input[type=text] {  /* can be set in .search-form__textfield with color: #fff  *
     position: relative;
     block-size: 298px;
     gap: 30px;
-    overflow: auto; /* also could use  overflow-y: scroll; to do so*/
+    overflow-x: hidden; /* also could use  overflow-y: scroll; to do so*/
 
 }
 
@@ -240,6 +241,21 @@ input[type=text] {  /* can be set in .search-form__textfield with color: #fff  *
   flex-direction: column;
   flex-grow: 1;
   gap: 6px;
+    max-width: 50%;
+}
+
+
+.content__video-card-description-container h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content__video-card-description-container p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 
