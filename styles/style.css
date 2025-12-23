@@ -164,7 +164,6 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     content: '';
     display: block;
     background-color: #FFF;
-    inline-size: 15px;
     block-size: 15px;
     margin: 1px;
 }
@@ -235,7 +234,7 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 26px;
 }
 
 .content__video-card-description-container {
@@ -294,26 +293,29 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
 .content__card-link {
     text-decoration: none;
     color: #FFF;
-    margin: 2px;
+   /* margin: 2px;*/
 }
 
 .content__card-link:focus-visible{
     outline: 1px solid #FFF;
 }
 
-.content__video-card:active {
-    background-color: #545050;
-}
 
+/*.content__video-card:active {
+    background-color: #545050;
+}*/
+
+/*
 .search-form__label:active .search-form__pseudo-checkbox,
 .search-form__checkbox:active + .search-form__pseudo-checkbox {
     background-color: rgba(255, 255, 255, 1);
 }
-
+*/
 
 /*________________*/
 
-.content__card-link_current:active {
+
+.content__card-link:active, .content__card-link_current{
     background-color: #545050;
 }
 
@@ -321,7 +323,7 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     display: flex;
     justify-content: space-between;
     align-items: self-start;
-    padding: 2px;
+   /* padding: 2px; */
 }
 
 .content__video-card-thumbnail {
@@ -334,7 +336,8 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
 
 .content__list-item {
     display: grid;
-    height: 103px;
+    margin: 2px;
+    /*height: 103px;*/
 }
 
 
