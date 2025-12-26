@@ -71,7 +71,7 @@ ol {
 .search-form {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: start;
 }
 
 .search-form__fieldset {
@@ -83,8 +83,6 @@ ol {
 .search-form__fieldset-title {
     font-size: 18px;
     font-weight: 400;
-    position: relative; /**/
-    top: -4px;
 }
 
 .search-form__checkbox-list {
@@ -102,13 +100,12 @@ ol {
 
 .search-form__label-text {
     cursor: pointer;
-    position: relative;
-    top: -6px;
 }
 
 .search-form__label:has(:focus-visible) {
-    padding: 2px;
-    border: 1px solid #FFF;
+    outline: 1px solid #fff;
+    outline-offset: 1px;
+
 }
 
 .search-form__label:hover .search-form__label-text { /*underline only text but hover on label*/
@@ -119,6 +116,8 @@ ol {
     appearance: none;
     background: transparent;
     border: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
     border-top: 1px solid #FFF;
     border-bottom: 1px solid #FFF;
     inline-size: 225px;
@@ -126,9 +125,7 @@ ol {
     font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    position: relative; /**/
-    top: -1.4px;
-    right: 4px;
+
 }
 
 input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
@@ -144,17 +141,12 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     outline: none;
 }
 
-.not-decorated-search-form:hover {
-    text-decoration: none;
-}
-
 .search-form__textfield:active {
-    border: 1px solid #FFF;
+    border-left-color: #FFF;
+    border-right-color: #FFF;
 }
 
 .search-form__pseudo-checkbox {
-    position: relative;
-    top: -7px;
     inline-size: 19px;
     block-size: 19px;
     border: 1px solid #FFF;
@@ -170,7 +162,6 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
 
 .button {
     cursor: pointer;
-    height: 100%;
     background-color: transparent;
     color: #FFF;
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -189,6 +180,7 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
 
 .search-form__submit-button {
     padding: 6px 73px;
+    align-self: end;
 }
 
 .button:hover {
@@ -202,9 +194,9 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
 .content__details {
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 22px;
     inline-size: 399px;
-    block-size: 100%;  /*works without*/
+    block-size: 100%; /*works without*/
 }
 
 .title {
@@ -225,7 +217,7 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     position: relative;
     block-size: 298px;
     gap: 30px;
-    overflow-y: scroll; /* also could use  overflow-x: hidden; to do so*/
+    overflow: auto; /* also could use  overflow-x: hidden; or overflow-y: scroll to do so*/
 
 }
 
@@ -241,17 +233,8 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 6px;
+    gap: 3px;
     max-width: 50%;
-}
-
-.content__video-card-description {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 16.2px;
-    letter-spacing: normal;
-
 }
 
 
@@ -268,24 +251,23 @@ input[type=text] { /* can be set in .search-form__textfield with color: #fff  */
     line-height: 100%;
     text-transform: uppercase;
     hyphens: auto;
-
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    position: relative;
-    top: -4px;
     max-width: 190px;
 }
 
 
 .content__video-card-description {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 16.2px;
+    letter-spacing: normal;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-    position: relative;
-    top: -6px;
-    line-height: 90%;
     max-width: 190px;
 
 }
